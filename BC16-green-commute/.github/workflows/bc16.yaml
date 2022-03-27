@@ -2,7 +2,7 @@ name: 'Build & Deploy Helm chart to EKS'
 on:
   push:
     branches:
-      - master
+      - dev
 env:
   DOCKER_ID: ${{ secrets.DOCKERHUB_USER }}
   DOCKER_PW: ${{ secrets.DOCKERHUB_PASSWD }}
