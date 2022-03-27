@@ -7,7 +7,7 @@ exports[`Commute options Matches the snapshot 1`] = `
     data-testid="commute-options"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
+      class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between"
     >
       <h4
         class="MuiTypography-root makeStyles-optionsLabel-2 MuiTypography-h4"
@@ -22,7 +22,7 @@ exports[`Commute options Matches the snapshot 1`] = `
         >
           <div>
             <div
-              class="MuiAvatar-root MuiAvatar-circle makeStyles-avatarUnselected-12 MuiAvatar-colorDefault"
+              class="MuiAvatar-root MuiAvatar-circular makeStyles-avatarUnselected-12 MuiAvatar-colorDefault"
             >
               <svg
                 aria-hidden="true"
@@ -49,7 +49,7 @@ exports[`Commute options Matches the snapshot 1`] = `
           </div>
           <div>
             <div
-              class="MuiAvatar-root MuiAvatar-circle makeStyles-avatarUnselected-12 MuiAvatar-colorDefault"
+              class="MuiAvatar-root MuiAvatar-circular makeStyles-avatarUnselected-12 MuiAvatar-colorDefault"
             >
               <svg
                 aria-hidden="true"
@@ -66,7 +66,7 @@ exports[`Commute options Matches the snapshot 1`] = `
           </div>
           <div>
             <div
-              class="MuiAvatar-root MuiAvatar-circle makeStyles-avatarUnselected-12 MuiAvatar-colorDefault"
+              class="MuiAvatar-root MuiAvatar-circular makeStyles-avatarUnselected-12 MuiAvatar-colorDefault"
             >
               <svg
                 aria-hidden="true"
@@ -93,7 +93,7 @@ exports[`Commute options Matches the snapshot 1`] = `
           </div>
           <div>
             <div
-              class="MuiAvatar-root MuiAvatar-circle makeStyles-avatarUnselected-12 MuiAvatar-colorDefault"
+              class="MuiAvatar-root MuiAvatar-circular makeStyles-avatarUnselected-12 MuiAvatar-colorDefault"
             >
               <svg
                 aria-hidden="true"
@@ -113,7 +113,7 @@ exports[`Commute options Matches the snapshot 1`] = `
     </div>
     <div>
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-xs-space-between"
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-content-xs-space-between"
       >
         <h6
           class="MuiTypography-root makeStyles-routeLabel-3 MuiTypography-h6"

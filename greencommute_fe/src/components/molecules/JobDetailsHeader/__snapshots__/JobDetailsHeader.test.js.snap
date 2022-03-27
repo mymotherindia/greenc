@@ -15,7 +15,7 @@ exports[`JobDetailsHeader renders correctly should match snapshot 1`] = `
           class="MuiGrid-root MuiGrid-item"
         >
           <div
-            class="MuiAvatar-root MuiAvatar-circle makeStyles-smallMedia-4"
+            class="MuiAvatar-root MuiAvatar-circular makeStyles-smallMedia-4"
           >
             <img
               alt="BMW company"

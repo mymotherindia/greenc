@@ -19,7 +19,7 @@ exports[`commute routes snapshot test Matches the snapshot 1`] = `
             class="MuiGrid-root MuiGrid-item"
           >
             <div
-              class="MuiAvatar-root MuiAvatar-circle makeStyles-smallMedia-16"
+              class="MuiAvatar-root MuiAvatar-circular makeStyles-smallMedia-16"
             >
               <img
                 alt="BMW company"
@@ -189,7 +189,7 @@ exports[`commute routes snapshot test Matches the snapshot 1`] = `
           data-testid="commute-options"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
+            class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between"
           >
             <h4
               class="MuiTypography-root makeStyles-optionsLabel-30 MuiTypography-h4"
@@ -204,7 +204,7 @@ exports[`commute routes snapshot test Matches the snapshot 1`] = `
               >
                 <div>
                   <div
-                    class="MuiAvatar-root MuiAvatar-circle makeStyles-avatarSelected-39 MuiAvatar-colorDefault"
+                    class="MuiAvatar-root MuiAvatar-circular makeStyles-avatarSelected-39 MuiAvatar-colorDefault"
                   >
                     <svg
                       aria-hidden="true"
@@ -231,7 +231,7 @@ exports[`commute routes snapshot test Matches the snapshot 1`] = `
                 </div>
                 <div>
                   <div
-                    class="MuiAvatar-root MuiAvatar-circle makeStyles-avatarUnselected-40 MuiAvatar-colorDefault"
+                    class="MuiAvatar-root MuiAvatar-circular makeStyles-avatarUnselected-40 MuiAvatar-colorDefault"
                   >
                     <svg
                       aria-hidden="true"
@@ -248,7 +248,7 @@ exports[`commute routes snapshot test Matches the snapshot 1`] = `
                 </div>
                 <div>
                   <div
-                    class="MuiAvatar-root MuiAvatar-circle makeStyles-avatarUnselected-40 MuiAvatar-colorDefault"
+                    class="MuiAvatar-root MuiAvatar-circular makeStyles-avatarUnselected-40 MuiAvatar-colorDefault"
                   >
                     <svg
                       aria-hidden="true"
@@ -275,7 +275,7 @@ exports[`commute routes snapshot test Matches the snapshot 1`] = `
                 </div>
                 <div>
                   <div
-                    class="MuiAvatar-root MuiAvatar-circle makeStyles-avatarUnselected-40 MuiAvatar-colorDefault"
+                    class="MuiAvatar-root MuiAvatar-circular makeStyles-avatarUnselected-40 MuiAvatar-colorDefault"
                   >
                     <svg
                       aria-hidden="true"
@@ -295,7 +295,7 @@ exports[`commute routes snapshot test Matches the snapshot 1`] = `
           </div>
           <div>
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-xs-space-between"
+              class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-content-xs-space-between"
             >
               <h6
                 class="MuiTypography-root makeStyles-routeLabel-31 MuiTypography-h6"
@@ -449,7 +449,7 @@ exports[`commute routes snapshot test Matches the snapshot 1`] = `
         class="MuiGrid-root MuiGrid-item"
       >
         <div
-          class="MuiGrid-root makeStyles-buttonsStyle-10 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-around"
+          class="MuiGrid-root makeStyles-buttonsStyle-10 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-around"
         >
           <button
             class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-base-48 makeStyles-medium-50 MuiButton-outlinedPrimary"

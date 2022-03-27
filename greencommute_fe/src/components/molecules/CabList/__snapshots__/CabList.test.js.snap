@@ -3,7 +3,7 @@
 exports[`CabList test Matches the snapshot 1`] = `
 <div>
   <div
-    class="MuiGrid-root makeStyles-root-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-direction-xs-column MuiGrid-justify-xs-center"
+    class="MuiGrid-root makeStyles-root-1 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-direction-xs-column MuiGrid-justify-content-xs-center"
     data-testid="cablist-placeholder"
   >
     <div
@@ -18,7 +18,7 @@ exports[`CabList test Matches the snapshot 1`] = `
           src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/v1459446250/xx0u5xwwzygivm67ogsk.jpg"
         />
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-direction-xs-column MuiGrid-justify-xs-center MuiGrid-grid-xs-7"
+          class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-direction-xs-column MuiGrid-justify-content-xs-center MuiGrid-grid-xs-7"
         >
           <h5
             class="MuiTypography-root makeStyles-title-2 MuiTypography-h5"
@@ -51,7 +51,7 @@ exports[`CabList test Matches the snapshot 1`] = `
           src="https://semaine-production.s3.amazonaws.com/products/product/image/6827/large_Uber-app.jpg"
         />
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-direction-xs-column MuiGrid-justify-xs-center MuiGrid-grid-xs-7"
+          class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-direction-xs-column MuiGrid-justify-content-xs-center MuiGrid-grid-xs-7"
         >
           <h5
             class="MuiTypography-root makeStyles-title-2 MuiTypography-h5"

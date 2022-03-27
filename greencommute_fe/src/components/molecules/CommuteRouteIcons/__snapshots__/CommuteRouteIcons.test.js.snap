@@ -10,7 +10,7 @@ exports[`CommuteRouteIcons component test Matches the snapshot 1`] = `
     >
       <div>
         <div
-          class="MuiAvatar-root MuiAvatar-circle makeStyles-avatarUnselected-7 MuiAvatar-colorDefault"
+          class="MuiAvatar-root MuiAvatar-circular makeStyles-avatarUnselected-7 MuiAvatar-colorDefault"
         >
           <svg
             aria-hidden="true"
@@ -37,7 +37,7 @@ exports[`CommuteRouteIcons component test Matches the snapshot 1`] = `
       </div>
       <div>
         <div
-          class="MuiAvatar-root MuiAvatar-circle makeStyles-avatarUnselected-7 MuiAvatar-colorDefault"
+          class="MuiAvatar-root MuiAvatar-circular makeStyles-avatarUnselected-7 MuiAvatar-colorDefault"
         >
           <svg
             aria-hidden="true"
