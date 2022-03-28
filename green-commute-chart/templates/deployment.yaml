@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: bc-frontend
-        image: "{{ .Values.image1.repository }}:{{ .Values.image1.tag }}"
+        image: "{{ .Values.imagefrontend.repository }}:{{ .Values.imagefrontend.tag }}"
         ports:
           - name: http
             containerPort: 80
@@ -42,7 +42,7 @@ spec:
     spec:
       containers:
       - name: db
-        image: "{{ .Values.image2.repository }}:{{ .Values.image2.tag }}"
+        image: "{{ .Values.imagepostgres.repository }}:{{ .Values.imagepostgres.tag }}"
         env:
           - name: POSTGRES_USER
             value: {{ .Values.secert1.Postgres_user }}
@@ -76,7 +76,7 @@ spec:
     spec:
       containers:
       - name: jobs
-        image: "{{ .Values.image3.repository }}:{{ .Values.image3.tag }}"
+        image: "{{ .Values.imagejobs.repository }}:{{ .Values.imagejobs.tag }}"
         env:
           - name: SPRING_DATASOURCE_URL
             value: {{ .Values.secert2.jobs_url }}
@@ -110,7 +110,7 @@ spec:
     spec:
       containers:
       - name: org
-        image: "{{ .Values.image4.repository }}:{{ .Values.image4.tag }}"
+        image: "{{ .Values.imageorg.repository }}:{{ .Values.imageorg.tag }}"
         env:
           - name: SPRING_DATASOURCE_URL
             value: {{ .Values.secert3.jobs_url }}
