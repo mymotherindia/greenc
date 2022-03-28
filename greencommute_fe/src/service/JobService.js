@@ -1,5 +1,5 @@
-export const jobResource = `www.pravees.gq`;
-// const jobResource = `www.pravees.gq`;
+export const jobResource = `http://localhost:8082/api/v1/jobs`;
+// const jobResource = `http://localhost:9000/jobs`;
 import axios from "axios";
 
 export const getAllJobs = (reqParams, cb) => {

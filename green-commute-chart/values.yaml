@@ -3,16 +3,16 @@ replicaCount: 1
 
 image1: 
     repository: praveensanjeev/ui
-    tag: latest
+    tag: v1
 image2:
      repository: postgres
      tag: latest
 image3:
      repository: praveensanjeev/js
-     tag: latest
+     tag: v1
 image4:
      repository: praveensanjeev/os
-     tag: latest   
+     tag: v1
 
           
 secert1: 
@@ -20,12 +20,12 @@ secert1:
     Postgres_passwd: postgres
     Postgres_db : postgres
 secert2: 
-    jobs_url: jdbc:postgresql://greencommute-db:5432/postgres
+    jobs_url: jdbc:postgresql://greenc-db:5432/postgres
     jobs_usr: ram
     jobs_passwd : postgres
     jobs_update: update
 secert3: 
-    jobs_url: jdbc:postgresql://greencommute-db:5432/postgres
+    jobs_url: jdbc:postgresql://greenc-db:5432/postgres
     jobs_usr: ram
     jobs_passwd : postgres
     jobs_update: update
