@@ -1,5 +1,5 @@
-export const jobResource = `a88c54c7db6ca46bfb3cda43375942ad-586354257.ap-south-1.elb.amazonaws.com`;
-// const jobResource = `http://localhost:9000/jobs`;
+export const jobResource = `www.pravees.gq`;
+// const jobResource = `www.pravees.gq`;
 import axios from "axios";
 
 export const getAllJobs = (reqParams, cb) => {

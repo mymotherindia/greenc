@@ -6,9 +6,14 @@ on:
 env:
   DOCKER_ID: ${{ secrets.DOCKERHUB_USER }}
   DOCKER_PW: ${{ secrets.DOCKERHUB_PASSWD }}
+  access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  EKS_CLUSTER: ${{ secrets.EKS_CLUSTER }}
+  EKS_REGION: ${{ secrets.EKS_REGION }}
+  
 jobs:
-  backend:
-    name: BUILD 
+  job-backend:
+    name: BUILD-JOBS 
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -32,9 +37,9 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWD }}
     - uses: actions/checkout@v2
     - name: build image 
-      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USER}}/bc16:v1
+      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USER}}/ui:latest
     - name: docker push
-      run: docker push ${{ secrets.DOCKERHUB_USER }}/bc16:v1
+      run: docker push ${{ secrets.DOCKERHUB_USER }}/ui:latest
 
   org-backend:
     name: BUILD-ORG
@@ -61,9 +66,9 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWD }}
     - uses: actions/checkout@v2
     - name: build image 
-      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USER}}/bc16:v2
+      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USER}}/js:latest
     - name: docker push
-      run: docker push ${{ secrets.DOCKERHUB_USER }}/bc16:v2
+      run: docker push ${{ secrets.DOCKERHUB_USER }}/js:latest
 
   frontend:
     name: frontend
@@ -85,6 +90,34 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWD }}
       - uses: actions/checkout@v2
       - name: build image 
-        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USER}}/bc16:v3
+        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USER}}/os:latest
       - name: docker push
-        run: docker push ${{ secrets.DOCKERHUB_USER }}/bc16:v3   
+        run: docker push ${{ secrets.DOCKERHUB_USER }}/os:latest
+
+  deploy:     
+    runs-on: ubuntu-latest
+    needs:
+    - frontend
+    - job-backend 
+    - org-backend    
+    
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-2
+
+      - name: Connect to EKS cluster 
+        run: aws eks --region $EKS_REGION update-kubeconfig --name $EKS_CLUSTER
+
+      - name: Deploy
+        uses: scalive/github-action-eks-helm@master
+      - name: helm deployment
+        run: helm install greenc green-commute-chart
+
+  
+   
