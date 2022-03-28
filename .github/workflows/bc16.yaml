@@ -1,4 +1,4 @@
-name: 'Build & Deploy Helm chart to EKS'
+name: 'BC16-DEPLOYMENT'
 on:
   push:
     branches:
