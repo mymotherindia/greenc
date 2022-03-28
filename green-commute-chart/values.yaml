@@ -21,6 +21,12 @@ secert2:
     jobs_usr: ram
     jobs_passwd : postgres
     jobs_update: update
+secert3: 
+    jobs_url: jdbc:postgresql://greencommute-db:5432/postgres
+    jobs_usr: ram
+    jobs_passwd : postgres
+    jobs_update: update
+    
  
 
 service1:
@@ -32,3 +38,23 @@ service2:
 service3:
   type: LoadBalancer
   port: 8082
+service4:
+  type: ClusterIP
+  port: 8081
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
