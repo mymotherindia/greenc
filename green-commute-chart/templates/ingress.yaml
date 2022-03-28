@@ -1,28 +1,28 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: bc-ingress
-  labels:
-    name: bc-ingress
-  annotations:
-    ingress.kubernetes.io/rewrite-target: /
-spec:
-   ingressClassName: nginx      
-   rules:
-   - host: www.pravees.gq
-     http:
-      paths:
-      - pathType: Prefix
-        path: "/jobs"
-        backend:
-          service:
-            name: greenc-bcjobs
-            port:
-              number: 8082
-      - pathType: Prefix
-        path: "/org"
-        backend:
-          service:
-            name: greenc-bcorg
-            port:
-              number: 8081
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: bc-ingress
+#   labels:
+#     name: bc-ingress
+#   annotations:
+#     ingress.kubernetes.io/rewrite-target: /
+# spec:
+#    ingressClassName: nginx      
+#    rules:
+#    - host: www.pravees.gq
+#      http:
+#       paths:
+#       - pathType: Prefix
+#         path: "/jobs"
+#         backend:
+#           service:
+#             name: greenc-bcjobs
+#             port:
+#               number: 8082
+#       - pathType: Prefix
+#         path: "/org"
+#         backend:
+#           service:
+#             name: greenc-bcorg
+#             port:
+#               number: 8081

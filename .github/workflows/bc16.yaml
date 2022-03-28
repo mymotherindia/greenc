@@ -117,7 +117,7 @@ jobs:
       - name: Deploy
         uses: scalive/github-action-eks-helm@master
       - name: helm deployment
-        run: helm upgrade greenc green-commute-chart
+        run: helm upgrade --install greenc green-commute-chart
 
   
    
