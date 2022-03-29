@@ -6,7 +6,7 @@ on:
 env:
   DOCKER_ID: ${{ secrets.DOCKERHUB_USER }}
   DOCKER_PW: ${{ secrets.DOCKERHUB_PASSWD }}
-  access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  # access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
   secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   EKS_CLUSTER: ${{ secrets.EKS_CLUSTER }}
   EKS_REGION: ${{ secrets.EKS_REGION }}
