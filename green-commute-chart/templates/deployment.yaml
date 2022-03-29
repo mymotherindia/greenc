@@ -17,9 +17,9 @@ spec:
       containers:
       - name: bc-frontend
         image: "{{ .Values.imagefrontend.repository }}:{{ .Values.imagefrontend.tag }}"
-        # env:
-        #   - name: jobResource
-        #     value: http://10.100.226.76:8082/api/v1/jobs
+        env:
+          - name: jobResource
+            value: http://a8894b67bddb84c068fc0b46011f6b8f-913771856.us-east-2.elb.amazonaws.com:8082/api/v1/jobs
         ports:
           - name: http
             containerPort: 80

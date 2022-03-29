@@ -3,16 +3,16 @@ replicaCount: 1
 
 imagefrontend: 
     repository: praveensanjeev/ui
-    tag: v7
+    tag: v8
 imagepostgres:
      repository: postgres
      tag: latest
 imagejobs:
      repository: praveensanjeev/js
-     tag: v7
+     tag: v8
 imageorg:
      repository: praveensanjeev/os
-     tag: v7
+     tag: v8
 
           
 secert1: 
