@@ -37,9 +37,9 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWD }}
     - uses: actions/checkout@v2
     - name: build image 
-      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USER}}/js:v4
+      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USER}}/js:v6
     - name: docker push
-      run: docker push ${{ secrets.DOCKERHUB_USER }}/js:v4
+      run: docker push ${{ secrets.DOCKERHUB_USER }}/js:v6
 
   org-backend:
     name: BUILD-ORG
@@ -66,9 +66,9 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWD }}
     - uses: actions/checkout@v2
     - name: build image 
-      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USER}}/os:v4
+      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USER}}/os:v6
     - name: docker push
-      run: docker push ${{ secrets.DOCKERHUB_USER }}/os:v4
+      run: docker push ${{ secrets.DOCKERHUB_USER }}/os:v6
 
   frontend:
     name: frontend
@@ -90,9 +90,9 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWD }}
       - uses: actions/checkout@v2
       - name: build image 
-        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USER}}/ui:v4
+        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USER}}/ui:v6
       - name: docker push
-        run: docker push ${{ secrets.DOCKERHUB_USER }}/ui:v4
+        run: docker push ${{ secrets.DOCKERHUB_USER }}/ui:v6
 
   deploy:     
     runs-on: ubuntu-latest
