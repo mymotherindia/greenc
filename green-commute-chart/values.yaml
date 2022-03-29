@@ -3,16 +3,16 @@ replicaCount: 1
 
 imagefrontend: 
     repository: praveensanjeev/ui
-    tag: v4
+    tag: v7
 imagepostgres:
      repository: postgres
      tag: latest
 imagejobs:
      repository: praveensanjeev/js
-     tag: v4
+     tag: v7
 imageorg:
      repository: praveensanjeev/os
-     tag: v4
+     tag: v7
 
           
 secert1: 
@@ -39,7 +39,7 @@ service2:
   type: ClusterIP
   port: 5432
 service3:
-  type: ClusterIP
+  type: LoadBalancer
   port: 8082
 service4:
   type: ClusterIP

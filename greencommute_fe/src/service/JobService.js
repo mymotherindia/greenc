@@ -1,5 +1,5 @@
-export const jobResource = `http://10.100.226.76:8082/api/v1/jobs`;
-// const jobResource = `http://10.100.226.76:9000/jobs`;
+export const jobResource = `http://localhost:8082/api/v1/jobs`;
+// const jobResource = `http://localhost:9000/jobs`;
 import axios from "axios";
 
 export const getAllJobs = (reqParams, cb) => {
