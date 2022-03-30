@@ -3,13 +3,13 @@ on:
   push:
     branches:
       - dev
-env:
-  DOCKER_ID: ${{ secrets.DOCKERHUB_USER }}
-  DOCKER_PW: ${{ secrets.DOCKERHUB_PASSWD }}
-  access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  EKS_CLUSTER: ${{ secrets.EKS_CLUSTER }}
-  EKS_REGION: ${{ secrets.EKS_REGION }}
+# env:
+#   DOCKER_ID: ${{ secrets.DOCKERHUB_USER }}
+#   DOCKER_PW: ${{ secrets.DOCKERHUB_PASSWD }}
+#   access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#   secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#   EKS_CLUSTER: ${{ secrets.EKS_CLUSTER }}
+#   EKS_REGION: ${{ secrets.EKS_REGION }}
   
 jobs:
   job-backend:
@@ -114,8 +114,8 @@ jobs:
       - name: Connect to EKS cluster 
         run: aws eks --region $EKS_REGION update-kubeconfig --name $EKS_CLUSTER
 
-      - name: Deploy
-        uses: scalive/github-action-eks-helm@master
+      # - name: Deploy
+      #   uses: scalive/github-action-eks-helm@master
       - name: helm deployment
         run: helm upgrade --install greenc green-commute-chart
 
