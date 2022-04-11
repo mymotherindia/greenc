@@ -113,28 +113,28 @@ jobs:
 
   
    
-  deploy2:     
-    runs-on: ubuntu-latest
-    needs:
-    - frontend
-    - job-backend 
-    - org-backend    
+  # deploy2:     
+  #   runs-on: ubuntu-latest
+  #   needs:
+  #   - frontend
+  #   - job-backend 
+  #   - org-backend    
     
-    steps:
-      - uses: actions/checkout@v2
+  #   steps:
+  #     - uses: actions/checkout@v2
 
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-2
+  #     - name: Configure AWS Credentials
+  #       uses: aws-actions/configure-aws-credentials@v1
+  #       with:
+  #         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  #         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  #         aws-region: us-east-2
 
-      - name: Connect to EKS cluster 
-        run: aws eks --region ${{ secrets.EKS_REGION2 }} update-kubeconfig --name ${{ secrets.EKS_CLUSTER2 }}
+  #     - name: Connect to EKS cluster 
+  #       run: aws eks --region ${{ secrets.EKS_REGION2 }} update-kubeconfig --name ${{ secrets.EKS_CLUSTER2 }}
 
-      - name: helm deployment
-        run: helm upgrade --install greenc green-commute-chart --set=imagefrontend.tag=${{github.run_number}} --set=imagejobs.tag=${{github.run_number}} --set=imageorg.tag=${{github.run_number}} 
+  #     - name: helm deployment
+  #       run: helm upgrade --install greenc green-commute-chart --set=imagefrontend.tag=${{github.run_number}} --set=imagejobs.tag=${{github.run_number}} --set=imageorg.tag=${{github.run_number}} 
 
 
 
